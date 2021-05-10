@@ -19,8 +19,8 @@ pipeline {
 
         stage('Selenium Test') {
             steps {
-               sh 'php artisan dusk'
                sh 'php artisan dusk:chrome-driver'
+               sh 'php artisan dusk'
                echo "Dusk"
             }
         }
