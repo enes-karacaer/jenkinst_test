@@ -8,7 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-<a href="">asd</a>
 <form action="/calc" method="post" >
     {{ csrf_field() }}
     <input placeholder="A" value="{{ $a }}" name="a" />
