@@ -16,11 +16,11 @@ class CalDuskTest extends DuskTestCase
     public function testExample()
     {
         $this->browse(function ($browser) {
-            $browser->visit('/')
+            $browser->visit(env('APP_URL').'/')
                 ->type('a', 3)
                 ->type('b', 1)
                 ->press('Execute')
-                ->assertPathIs('/calc')
+                ->assertPathIs(env('APP_URL').'/calc')
                 ->assertSee('4');
         });
     }
