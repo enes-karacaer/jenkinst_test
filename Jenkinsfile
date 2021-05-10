@@ -17,11 +17,16 @@ pipeline {
             }
         }
 
+        stage('Selenium Test') {
+            steps {
+               sh 'php artisan dusk'
+               echo "Dusk"
+            }
+        }
 
 
         stage('Deploy') {
             steps {
-               // sh 'php artisan dusk'
                echo "Deploy"
             }
         }
