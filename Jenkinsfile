@@ -12,7 +12,6 @@ pipeline {
         }
         stage("Unit Test") {
             steps {
-             // sh 'php artisan test'
              sh 'vendor/bin/phpunit'
             }
         }
@@ -24,7 +23,6 @@ pipeline {
                echo "Dusk"
             }
         }
-
 
         stage('Deploy') {
             steps {

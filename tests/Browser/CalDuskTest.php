@@ -21,7 +21,7 @@ class CalDuskTest extends DuskTestCase
                 ->type('b', 1)
                 ->press('Execute')
                 ->assertPathIs('/calc')
-                ->assertSee('4');
+                ->assertSee('5');
         });
     }
 }
